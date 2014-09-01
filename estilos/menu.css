@@ -25,32 +25,22 @@
 	cursor:pointer;
 }
 
-#btnServices {
-	background:#00ACED;
-}
+#btnServices { background-color: #00ACED; }
 
-#btnWork {
-	background:#6DCDF4;
-}
+#btnWork { background-color: #6DCDF4; }
 
-#btnAbout {
-	background:#EB1B2E;
-}
+#btnAbout { background-color: #EB1B2E; }
 
-#btnTouch {
-	background:#F06522;
-}
+#btnTouch { background-color: #F06522; }
 
-#btnGreat {
-	background:#FFC905;
-}
+#btnGreat { background-color: #FFC905; }
 
 #menuMobBtn {
 	display:none;
 	width:50px;
 	height:50px;
 	margin:-15px 0 15px -40px;
-	background:url(../imagens/btn_menu_mobile.png);
+	background-image: url('../imagens/btn_menu_mobile.png');
 	background-size:cover;
 }
 
@@ -59,11 +49,6 @@
 	height:25px;
 	float:right;
 	clear:both;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
 	display:none;
-	background:url(../imagens/btn_fechar.png);
-	background-size:100%;
-	background-repeat:no-repeat;
-	background-position:right;
+	background: url('../imagens/btn_fechar.png') no-repeat 100% 50% / 100%;
 }

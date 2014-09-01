@@ -1,86 +1,22 @@
 a {
-	text-decoration: underline;
-	font-family: 'Oswald', arial;
-	color:#929496;
-	font-size:14pt;
-	font-weight:400;
-	line-height:24pt;
+	color: #929496;
+	font-weight: 400;
+	line-height: 24pt;
 }
 
-#contWork a {
-	text-decoration:none;
-}
+#contWork a { text-decoration:none; }
 
-#contGreat a {
-	text-decoration: underline;
-	font-family: 'Oswald', arial;
-	color:#929496;
-	font-size:14pt;
-	font-weight:400;
-	line-height:24pt;
-}
+#contGreat .savethedate a { color:#333; }
 
-#contGreat .savethedate a {
-	text-decoration: underline;
-	font-family: 'Oswald', arial;
-	color:#333;
-	font-size:14pt;
-	font-weight:400;
-	line-height:24pt;
-}
+#contTouch a { font-weight:300; }
 
-#contTouch a {
-	text-decoration: underline;
-	line-height:18pt;
-	font-size:14pt;
-	font-family: 'Oswald';
-	color:#929496;
-	font-weight:300;
-	width:580px;
-	line-height:24pt;
-}
-
-a.linkFooter:link {
-	text-decoration: underline;
-	font-family: 'Oswald', arial;
-	color:#A6A8AA;
-	font-size:9pt;
-	font-weight:300;
-	line-height:12pt;
-}
-
-a.linkFooter:visited {
-	text-decoration: underline;
-	font-family: 'Oswald', arial;
-	color:#A6A8AA;
-	font-size:9pt;
-	font-weight:300;
-	line-height:12pt;
-}
-
-a.linkFooter:hover {
-	text-decoration: underline;
-	font-family: 'Oswald', arial;
-	color:#A6A8AA;
-	font-size:9pt;
-	font-weight:300;
-	line-height:12pt;
-}
-
-a.linkFooter:active {
-	text-decoration: underline;
-	font-family: 'Oswald', arial;
-	color:#A6A8AA;
-	font-size:9pt;
-	font-weight:300;
-	line-height:12pt;
+a.linkFooter {
+	color: #A6A8AA;
+	font-weight: 300;
+	line-height: 12pt;
 }
 
 #cookies a {
-	text-decoration: underline;
-	font-family: 'Oswald', arial;
-	color:#929496;
-	font-size:10pt;
 	font-weight:300;
 	line-height:12pt;
 }

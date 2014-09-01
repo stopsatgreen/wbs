@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
-@import "gerais.css";
+@import "fonts.css";
 @import "menu.css";
 @import "links.css";
 
@@ -69,7 +69,6 @@
 	padding:25px;
 	box-sizing:border-box;
 	width:250px;
-	margin:20px 0 0 0;
 }
 
 #socialMedia {
@@ -112,23 +111,12 @@
 #content {
 	float:left;
 	width:66%;
-	margin:20px 0 0 0;
-}
-
-#home p {
-	font-weight:400;
-	margin-top:120px;
-	line-height:52pt;
-	font-size:34pt;
-	color:#A6A8AA;
-	width:100%;
-	min-height:260px;
 }
 
 .homeSeparator  {
     width:100%;
-    margin:0 0 70px 0; 
-	padding:0; 
+    margin:0 0 70px 0;
+	padding:0;
 	border:0;
 	height:50px;
 	background:url(../imagens/grafismo.png);
@@ -137,7 +125,7 @@
 .homeSeparator div {
     background: #fff;
 	height:50px;
-	width:275px;    
+	width:275px;
 }
 
 .top {
@@ -237,32 +225,26 @@
 	margin:20px 0 0 0;
 }
 
-#case01 {
-	background:url(../imagens/img_work_clearblue.jpg);
+.case-study {
 	background-repeat:no-repeat;
 	background-size:100%;
 	background-position:top;
+}
+
+#case01 {
+	background-image: url(../imagens/img_work_clearblue.jpg);
 }
 
 #case02 {
-	background:url(../imagens/img_work_natgeo.jpg);
-	background-repeat:no-repeat;
-	background-size:100%;
-	background-position:top;
+	background-image: url(../imagens/img_work_natgeo.jpg);
 }
 
 #case03 {
-	background:url(../imagens/img_work_pottermore.jpg);
-	background-repeat:no-repeat;
-	background-size:100%;
-	background-position:top;
+	background-image: url(../imagens/img_work_pottermore.jpg);
 }
 
 #case04 {
-	background:url(../imagens/img_work_bestseller.jpg);
-	background-repeat:no-repeat;
-	background-size:100%;
-	background-position:top;
+	background-image: url(../imagens/img_work_bestseller.jpg);
 }
 
 #contAbout .titulo {
@@ -321,13 +303,8 @@ and (max-width : 532px) {
 	margin:0 auto 0 auto;
 	box-szing:border-box;
 }
-#home p {
-	margin:0 0 100px 0;
-	padding:0;
-	line-height:28pt;
-	font-size:22pt;
-}
-#menuMob{		
+
+#menuMob{
 	position:absolute;
 	top:0;
 	left:-1000px;
@@ -392,11 +369,7 @@ and (max-width : 532px) {
 	margin:50px 0 50px 0;
 	background:url(../imagens/btn_top.png);
 }
-p {
-	width:100%;
-	line-height:20pt;
-	font-size:14pt;
-}
+
 #menuMobBtn,#btnFechar {
 	display:block;
 }
@@ -471,13 +444,8 @@ and (max-width : 800px) {
 	margin:0 auto 0 auto;
 	box-szing:border-box
 }
-#home p {
-	margin:0 0 50px 0;
-	padding:0;
-	line-height:28pt;
-	font-size:22pt;
-}
-#menuMob{		
+
+#menuMob{
 	position:absolute;
 	top:-10px;
 	left:-1000px;
@@ -533,11 +501,6 @@ and (max-width : 800px) {
 	height:10px;
 	margin:50px 0 50px 0;
 	background:url(../imagens/btn_top.png);
-}
-p {
-	width:100%;
-	line-height:20pt;
-	font-size:14pt;
 }
 #menuMobBtn,#btnFechar {
 	display:block;
