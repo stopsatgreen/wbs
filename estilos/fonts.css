@@ -7,6 +7,8 @@ body {
 
 img { border: 0; }
 
+strong { font-weight: 400; }
+
 h1, h2, h3, p {
 	margin: 0;
 }
@@ -49,7 +51,14 @@ p {
 	}
 }
 
+/* Links */
 
-strong {
-	font-weight:400;
-}
+a { color: #929496; }
+
+#contWork a { text-decoration:none; }
+
+#contGreat a { font-weight: 400; }
+
+#contGreat .savethedate a { color:#333; }
+
+a.linkFooter { color: #A6A8AA; }
