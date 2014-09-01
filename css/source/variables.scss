@@ -8,3 +8,13 @@ $text-color:    #929496; /* Grey */
 $heading-color: #A6A8AA; /* Light grey */
 
 $image-path:    '../../imagens/';
+
+@mixin box-style() {
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-weight: 400;
+  height: 50px;
+  line-height: 0.5;
+  padding: 25px 0 0 10px;
+  width: 100%;
+}
