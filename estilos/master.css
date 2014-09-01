@@ -2,9 +2,16 @@
 @import "fonts.css";
 @import "menu.css";
 
-.clear {
-	clear:both;
+body {
+	font-family: 'Oswald', sans-serif;
+	margin: 0;
 }
+
+.show-cookies { padding-top: 30px; }
+
+img { border: 0; }
+
+.clear { clear: both; }
 
 #error {
 	width:600px;
@@ -118,7 +125,7 @@
 	padding:0;
 	border:0;
 	height:50px;
-	background:url(../imagens/grafismo.png);
+	background:url('../imagens/grafismo.png');
 }
 
 .homeSeparator div {
@@ -131,7 +138,7 @@
 	width:150px;
 	height:45px;
 	margin:50px 0 25px 0;
-	background:url(../imagens/btn_top.png);
+	background:url('../imagens/btn_top.png');
 	background-size:100%;
 	background-repeat:no-repeat;
 }
@@ -197,7 +204,7 @@
 
 .caseLeg {
 	height:95px;
-	background:url(../imagens/1px_blue_95.png);
+	background:url('../imagens/1px_blue_95.png');
 	box-sizing: border-box;
 	padding:10px;
 	width:100%;
@@ -231,19 +238,19 @@
 }
 
 #case01 {
-	background-image: url(../imagens/img_work_clearblue.jpg);
+	background-image: url('../imagens/img_work_clearblue.jpg');
 }
 
 #case02 {
-	background-image: url(../imagens/img_work_natgeo.jpg);
+	background-image: url('../imagens/img_work_natgeo.jpg');
 }
 
 #case03 {
-	background-image: url(../imagens/img_work_pottermore.jpg);
+	background-image: url('../imagens/img_work_pottermore.jpg');
 }
 
 #case04 {
-	background-image: url(../imagens/img_work_bestseller.jpg);
+	background-image: url('../imagens/img_work_bestseller.jpg');
 }
 
 #contAbout .titulo {
@@ -320,7 +327,7 @@ and (max-width : 532px) {
 	width:50px;
 	height:50px;
 	margin:15px 0 15px -15px;
-	background:url(../imagens/btn_menu_mobile.png);
+	background:url('../imagens/btn_menu_mobile.png');
 	background-size:cover;
 }
 #menu {
@@ -366,7 +373,7 @@ and (max-width : 532px) {
 	width:100px;
 	height:10px;
 	margin:50px 0 50px 0;
-	background:url(../imagens/btn_top.png);
+	background:url('../imagens/btn_top.png');
 }
 
 #menuMobBtn,#btnFechar {
@@ -499,7 +506,7 @@ and (max-width : 800px) {
 	width:100px;
 	height:10px;
 	margin:50px 0 50px 0;
-	background:url(../imagens/btn_top.png);
+	background:url('../imagens/btn_top.png');
 }
 #menuMobBtn,#btnFechar {
 	display:block;
