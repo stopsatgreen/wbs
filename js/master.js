@@ -72,10 +72,10 @@ $(document).ready(function(){
 		}
 	);
 
-	$(window).scroll(function() {
-		var scrollPos = $(window).scrollTop();
-		$('#sticker').css('top',scrollPos);
-	});
+	// $(window).scroll(function() {
+	// 	var scrollPos = $(window).scrollTop();
+	// 	$('#sticker').css('top',scrollPos);
+	// });
 
 	var offset = (screenSize === 'large') ? 157 : 50;
 
