@@ -5,13 +5,11 @@ $(document).ready(function(){
 	alert(largura);*/
 
 	$("#menuMobBtn").click(function() {
-		$("#menuMob").animate({left:0});
+		$("#menuMob").addClass('show');
 	});
 
 	$("#btnFechar").click(function() {
-		$("#menuMob").animate({left:"-1000px"},500,function() {
-			$("#menuMobBtn").fadeTo("fast",1);
-		});
+		$("#menuMob").removeClass('show');
 	});
 
 	$("#cookies img").click(function() {
@@ -53,6 +51,8 @@ $(document).ready(function(){
 		var scrollPos = $(window).scrollTop();
 		$("#sticker").css("top",scrollPos);
 	});
+
+	/* Rewrite these to use single function CSS class */
 
 	$("#btnServices").click(function(){
 		$("#menuMob").animate({left:"-1000px"},1000);

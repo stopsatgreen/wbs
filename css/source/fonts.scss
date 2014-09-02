@@ -29,16 +29,14 @@ h1 {
 
 p {
 	font-size: 1.25em;
-	line-height: 1.4;
+	line-height: 1.5;
 	font-weight: 300;
 	margin-bottom: 1em;
 }
 
 @media ($breakpoint-from-medium) {
-	p {
-		width: 80%;
-		line-height: 1.6;
-	}
+
+	p { line-height: 1.6; }
 }
 
 /* Links */
