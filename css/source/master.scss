@@ -202,12 +202,12 @@ img { border: 0; }
 	width: 150px;
 }
 
-@media (min-width: 533px) {
+@media ($breakpoint-from-small) {
 
 	#sticker { padding: 0 0 25px 7.5%; }
 }
 
-@media (min-width: 801px) {
+@media ($breakpoint-from-medium) {
 
 	#sticker {
 		position: relative;
@@ -262,7 +262,7 @@ img { border: 0; }
 
 /* Mobile Menu & Footer */
 
-@media (max-width : 800px) {
+@media ($breakpoint-to-large) {
 
 	#menuMob {
 			background: #fff;
@@ -402,7 +402,7 @@ img { border: 0; }
 	}
 }
 
-@media only screen and (min-width : 801px) {
+@media ($breakpoint-from-small) {
 
 	#cookies { margin-bottom: 25px;
 
@@ -414,7 +414,7 @@ img { border: 0; }
 	}
 }
 
-@media only screen and (min-width : 801px) {
+@media ($breakpoint-from-medium) {
 
 	.show-cookies { padding-top: 30px; }
 
@@ -437,8 +437,8 @@ img { border: 0; }
 			}
 
 			& p  {
-				font-size: 10pt;
-				line-height: 14pt;
+				font-size: 0.875em;
+				line-height: 1.42857;
 			}
 		}
 	}

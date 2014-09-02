@@ -1,11 +1,4 @@
 @import url("http://fonts.googleapis.com/css?family=Oswald:300,400,700");
-/* Navy */
-/* Sky */
-/* Red */
-/* Orange */
-/* Yellow */
-/* Grey */
-/* Light grey */
 strong {
   font-weight: 400; }
 
@@ -424,12 +417,12 @@ img {
     line-height: 12pt;
     width: 78%; }
 
-@media only screen and (min-width: 801px) {
+@media (min-width: 533px) {
   #cookies {
     margin-bottom: 25px; }
     #cookies .cont img {
       margin-top: 5px; } }
-@media only screen and (min-width: 801px) {
+@media (min-width: 801px) {
   .show-cookies {
     padding-top: 30px; }
 
@@ -446,7 +439,7 @@ img {
       #cookies .cont img:hover {
         cursor: pointer; }
     #cookies .cont p {
-      font-size: 10pt;
-      line-height: 14pt; } }
+      font-size: 0.875em;
+      line-height: 1.42857; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,13 +1,18 @@
-$brand-color-1: #00ACED; /* Navy */
-$brand-color-2: #6DCDF4; /* Sky */
-$brand-color-3: #EB1B2E; /* Red */
-$brand-color-4: #F06522; /* Orange */
-$brand-color-5: #FFC905; /* Yellow */
+$brand-color-1: #00ACED; // Navy
+$brand-color-2: #6DCDF4; // Sky
+$brand-color-3: #EB1B2E; // Red
+$brand-color-4: #F06522; // Orange
+$brand-color-5: #FFC905; // Yellow
 
-$text-color:    #929496; /* Grey */
-$heading-color: #A6A8AA; /* Light grey */
+$text-color:    #929496; // Grey
+$heading-color: #A6A8AA; // Light grey
 
 $image-path:    '../../imagens/';
+
+$breakpoint-from-small:   'min-width: 533px';
+$breakpoint-from-medium:  'min-width: 801px';
+$breakpoint-to-medium:    'max-width: 532px';
+$breakpoint-to-large:     'max-width: 800px';
 
 @mixin box-style() {
   box-sizing: border-box;
