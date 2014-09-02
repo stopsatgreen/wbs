@@ -21,7 +21,7 @@ img { border: 0; }
 	& p { width: 100%; }
 
 	& .tit {
-		font-size:22pt;
+		font-size: 22pt;
 		font-weight:400;
 		line-height:12pt;
 		margin:15px 0 30px 0;
@@ -58,7 +58,7 @@ img { border: 0; }
 .subtopic {
 	color: #fff;
 	margin: 25px 0;
-	padding: 15px 0 0 10px;
+	padding: 25px 0 0 10px;
 	@include box-style();
 }
 
@@ -203,7 +203,11 @@ img { border: 0; }
 			margin: 0;
 		}
 
-		& .caseDet .download { margin: 20px 0 0 0; }
+		& .download {
+			background: url('#{$image-path}btn_download.png') no-repeat left center / contain;
+			margin: 20px 0 0 0;
+			padding-left: 2em;
+		}
 
 	}
 }
@@ -233,8 +237,8 @@ img { border: 0; }
 }
 
 .caseLeg {
-	height:95px;
-	background:url('#{$image-path}1px_blue_95.png');
+	height: 95px;
+	background: url('#{$image-path}1px_blue_95.png');
 	box-sizing: border-box;
 	cursor: pointer;
 	padding:10px;
@@ -415,11 +419,10 @@ img { border: 0; }
 
 		& p  {
 			float: left;
-			margin: 0;
-			padding: 0;
-			font-size: 11pt;
-			line-height: 12pt;
-			width: 78%;
+			font-size: 0.875em;
+			line-height: 1.14286;
+			margin-bottom: 0;
+			max-width: 70%;
 		}
 	}
 }

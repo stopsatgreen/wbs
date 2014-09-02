@@ -4,88 +4,93 @@ $(document).ready(function(){
 
 	alert(largura);*/
 
-	$("#menuMobBtn").click(function() {
-		$("#menuMob").addClass('show');
-	});
+	var navClass = 'show',
+			screenSize;
 
-	$("#btnFechar").click(function() {
-		$("#menuMob").removeClass('show');
-	});
+	if (window.matchMedia) {
+		if (window.matchMedia('(max-width: 532px)').matches) {
+			screenSize = 'small';
+		} else if (window.matchMedia('(min-width: 533px) and (max-width: 800px)').matches) {
+			screenSize = 'medium';
+		} else {
+			screenSize = 'large';
+		}
+	}
 
-	$("#cookies img").click(function() {
-		var alturaCookies = $("#cookies").height()*2;
-		$("#cookies").animate({"margin-top":"-"+alturaCookies+"px"});
+	console.log(screenSize);
+
+	function hideNav() {
+		$('#menuMob').removeClass(navClass);
+		return true;
+	}
+
+	if (screenSize != 'large') {
+
+		$('#menuMobBtn').click(function() {
+			$('#menuMob').addClass(navClass);
+		});
+
+		$('#btnFechar').click(function() {
+			hideNav();
+		});
+
+	}
+
+	$('#cookies img').click(function() {
+		var alturaCookies = $('#cookies').height()*2;
+		$('#cookies').animate({'margin-top':'-'+alturaCookies+'px'});
 	});
 
 
 
 	/*var larguraTela = $(window).width();
-	$("#debug").html(larguraTela);*/
+	$('#debug').html(larguraTela);*/
 
-	var larguraCase = $("#contWork .col").width();
-	$("#contWork .col").height(larguraCase);
+	var larguraCase = $('#contWork .col').width();
+	$('#contWork .col').height(larguraCase);
 
-	$(".caseLeg").click(function() {
-		$(".caseLegWrap",this).hide();
-		$(this).stop(true).animate({"height":"100%"},function() {
-			$(".caseDet",this).fadeIn();
+	$('.caseLeg').click(function() {
+		$('.caseLegWrap',this).hide();
+		$(this).stop(true).animate({'height':'100%'},function() {
+			$('.caseDet',this).fadeIn();
 		});
 
 	});
 
-	$( ".caseLeg" ).hover(
+	$( '.caseLeg' ).hover(
 		function() {
-			$(".caseLegWrap",this).hide();
-			$(this).stop(true).animate({"height":"100%"},50,function() {
-				$(".caseDet",this).fadeIn();
+			$('.caseLegWrap',this).hide();
+			$(this).stop(true).animate({'height':'100%'},50,function() {
+				$('.caseDet',this).fadeIn();
 			});
 		}, function() {
-			$(".caseDet",this).hide();
-			$(this).stop(true).animate({"height":"95px"},50,function() {
-				$(".caseLegWrap",this).fadeIn();
+			$('.caseDet',this).hide();
+			$(this).stop(true).animate({'height':'95px'},50,function() {
+				$('.caseLegWrap',this).fadeIn();
 			});
 		}
 	);
 
 	$(window).scroll(function() {
 		var scrollPos = $(window).scrollTop();
-		$("#sticker").css("top",scrollPos);
+		$('#sticker').css('top',scrollPos);
 	});
 
-	/* Rewrite these to use single function CSS class */
+	var offset = (screenSize === 'large') ? 157 : 50;
 
-	$("#btnServices").click(function(){
-		$("#menuMob").animate({left:"-1000px"},1000);
-		$('html, body').animate({scrollTop: $("#contServices").offset().top-157}, 500);
+	$('.menuBtn a').on('click', function (e) {
+		e.preventDefault();
+		var menuTarget = e.currentTarget.getAttribute('href');
+		if (screenSize != 'large') { hideNav(); }
+		$('html, body').animate({scrollTop: $(menuTarget).offset().top-offset}, 500);
 	});
 
-	$("#btnWork").click(function(){
-		$("#menuMob").animate({left:"-1000px"},1000,function() {
-			$('html, body').animate({scrollTop: $("#contWork").offset().top-157}, 500);
-		});
+	$('.top').click(function(){
+		$('html, body').animate({scrollTop: $('html, body').offset().top-offset}, 250);
 	});
 
-	$("#btnAbout").click(function(){
-		$("#menuMob").animate({left:"-1000px"},1000);
-		$('html, body').animate({scrollTop: $("#contAbout").offset().top-157}, 250);
-	});
-
-	$("#btnTouch").click(function(){
-		$("#menuMob").animate({left:"-1000px"},1000);
-		$('html, body').animate({scrollTop: $("#contTouch").offset().top-157}, 250);
-	});
-
-	$("#btnGreat").click(function(){
-		$("#menuMob").animate({left:"-1000px"},1000);
-		$('html, body').animate({scrollTop: $("#contGreat").offset().top-157}, 250);
-	});
-
-	$(".top").click(function(){
-		$('html, body').animate({scrollTop: $("html, body").offset().top-157}, 250);
-	});
-
-	$("#logo").click(function(){
-		$('html, body').animate({scrollTop: $("html, body").offset().top-157}, 250);
+	$('#logo').click(function(){
+		$('html, body').animate({scrollTop: $('html, body').offset().top-offset}, 250);
 	});
 
 });

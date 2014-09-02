@@ -16,20 +16,24 @@
 	border-width: 0 2px;
 	color: #fff;
 	@include box-style();
-}
 
-.menuBtn:first-of-type {
-	border-top-width: 2px;
-}
+	& a {
+		box-sizing: border-box;
+		display: block;
+		height: 50px;
+		padding: 25px 0 0 10px;
+		text-decoration: none;
+	}
 
-.menuBtn:last-of-type {
-	border-bottom-width: 2px;
-}
+	&:first-of-type { border-top-width: 2px; }
 
-.menuBtn:hover,
-.menuBtn:active {
-	background-color: white !important;
-	cursor: pointer;
+	&:last-of-type { border-bottom-width: 2px; }
+
+	&:hover,
+	&:active {
+		background-color: white !important;
+		cursor: pointer;
+	}
 }
 
 #btnServices {
