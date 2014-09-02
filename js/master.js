@@ -1,12 +1,11 @@
 $(document).ready(function(){
 
-	/*var largura = $("p").width();
-
-	alert(largura);*/
+// !Rewrite to remove jQuery
 
 	var navClass = 'show',
 			screenSize;
 
+// !Update to be dynamic
 	if (window.matchMedia) {
 		if (window.matchMedia('(max-width: 532px)').matches) {
 			screenSize = 'small';
@@ -16,8 +15,6 @@ $(document).ready(function(){
 			screenSize = 'large';
 		}
 	}
-
-	console.log(screenSize);
 
 	function hideNav() {
 		$('#menuMob').removeClass(navClass);

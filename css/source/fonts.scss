@@ -6,10 +6,15 @@ h1, h2, h3, p {
 
 h1 {
 	color: $heading-color;
-	margin: 0 0 70px 0;
-	line-height: 1.33333;
 	font-size: 1.875em;
 	font-weight: 400;
+	line-height: 1.33333;
+}
+
+#home h1 {
+	background: url('#{$image-path}grafismo-50.png') repeat-x 0 100%;
+	margin: 0 0 70px 0;
+	padding-bottom: 100px;
 }
 
 @media ($breakpoint-from-small) {
@@ -19,6 +24,7 @@ h1 {
 }
 
 @media ($breakpoint-from-medium) {
+
 	h1 {
 		font-size: 2.875em;
 		line-height: 1.4783;

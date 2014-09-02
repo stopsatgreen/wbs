@@ -7,10 +7,14 @@ h1, h2, h3, p {
 
 h1 {
   color: #A6A8AA;
-  margin: 0 0 70px 0;
-  line-height: 1.33333;
   font-size: 1.875em;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 1.33333; }
+
+#home h1 {
+  background: url("../../imagens/grafismo-50.png") repeat-x 0 100%;
+  margin: 0 0 70px 0;
+  padding-bottom: 100px; }
 
 @media (min-width: 533px) {
   h1 {
@@ -116,30 +120,12 @@ img {
 .clear {
   clear: both; }
 
-#error {
-  width: 600px;
-  margin: 10% auto 0 auto;
-  text-align: center; }
-  #error p {
-    width: 100%; }
-  #error .tit {
-    font-size: 22pt;
-    font-weight: 400;
-    line-height: 12pt;
-    margin: 15px 0 30px 0;
-    padding: 0; }
-
 #logo {
   max-width: 100%; }
 
 @media (min-width: 533px) and (max-width: 800px) {
   #logo {
     width: 55%; } }
-.homeSeparator {
-  background-image: url("../../imagens/grafismo.png");
-  height: 50px;
-  margin: 0 0 70px 0; }
-
 /* Headings */
 .titulo {
   font-size: 2.875em;
@@ -173,9 +159,8 @@ img {
   margin: 0 1em; }
 
 .top {
-  background-image: url("../../imagens/btn_top.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background: url("../../imagens/btn_top.png") no-repeat 0 0/100% auto;
+  clear: both;
   height: 15px;
   margin: 50px 0;
   width: 150px; }
@@ -194,8 +179,11 @@ img {
     width: 250px; }
 
   #content {
-    margin: 0 auto;
+    margin: 0 auto 40px;
     width: 66%; }
+
+  #home {
+    margin-top: 120px; }
 
   .top {
     height: 45px;
@@ -264,8 +252,6 @@ img {
     padding-left: 2em; }
 
 @media (min-width: 533px) {
-  #contWork .titulo {
-    margin: 25px 0; }
   #contWork .col {
     float: left;
     height: 47%;
@@ -274,11 +260,11 @@ img {
 @media (min-width: 801px) {
   #contWork .col {
     height: 300px;
-    margin: 50px 50px 0 0;
+    margin: 25px 25px 0 0;
     width: 300px; } }
 .caseLeg {
   height: 95px;
-  background: url("../../imagens/1px_blue_95.png");
+  background-color: #6DCDF4;
   box-sizing: border-box;
   cursor: pointer;
   padding: 10px;
@@ -288,15 +274,12 @@ img {
 
 .caseDet {
   display: none; }
-  .caseDet img {
-    float: left;
-    margin: -5px 10px 0 0;
-    width: 25px; }
 
+/* Work needed */
 .case-study {
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 100%; }
+  background-size: 100% auto; }
 
 #case01 {
   background-image: url("../../imagens/img_work_clearblue.jpg"); }
@@ -321,14 +304,16 @@ img {
   position: relative; }
 
 @media (min-width: 801px) {
-  #contTouch .col1, #contTouch .col2 {
-    float: left; }
-  #contTouch .col1 {
-    margin: 25px 25px 0 0;
-    width: 250px; }
-  #contTouch .col2 {
-    display: block;
-    margin: 25px 0 0 0; } }
+  #contTouch {
+    overflow: hidden; }
+    #contTouch .col1, #contTouch .col2 {
+      float: left; }
+    #contTouch .col1 {
+      margin: 25px 25px 0 0;
+      width: 250px; }
+    #contTouch .col2 {
+      display: block;
+      margin: 25px 0 0 0; } }
 #contGreat .titulo {
   color: #FFC905;
   text-transform: uppercase;
@@ -355,9 +340,12 @@ img {
     text-align: left;
     top: 0;
     width: 95%;
+    -webkit-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
+    -webkit-transform: translateX(-100%);
     transform: translateX(-100%); }
     #menuMob.show {
+      -webkit-transform: none;
       transform: none; }
 
   #menuMobBtn {
@@ -435,5 +423,18 @@ img {
     #cookies .cont p {
       font-size: 0.875em;
       line-height: 1.42857; } }
+/* Error (?) */
+#error {
+  width: 600px;
+  margin: 10% auto 0 auto;
+  text-align: center; }
+  #error p {
+    width: 100%; }
+  #error .tit {
+    font-size: 22pt;
+    font-weight: 400;
+    line-height: 12pt;
+    margin: 15px 0 30px 0;
+    padding: 0; }
 
 /*# sourceMappingURL=style.css.map */
