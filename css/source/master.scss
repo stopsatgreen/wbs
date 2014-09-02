@@ -31,6 +31,11 @@ img { border: 0; }
 
 #logo { max-width: 100%; }
 
+@media ($breakpoint-from-small) and ($breakpoint-to-large) {
+
+		#logo { width: 55%; }
+}
+
 .homeSeparator  {
 	background-image: url('#{$image-path}grafismo.png');
 	height: 50px;
@@ -72,26 +77,52 @@ img { border: 0; }
 	& .titulo { color: $brand-color-2; }
 
  	& .col {
-		width:300px;
-		height:300px;
-		border:1px #C6C7C9 solid;
-		position:relative;
-		float:left;
-		margin:50px 50px 0 0;
+		border: 1px #C6C7C9 solid;
+		height: 300px;
+		margin: 0 0 1em 0;
+		position: relative;
+		width: 100%;
 
 		& p {
-			margin:0;
-			padding:0;
-			font-size:11pt;
-			color:#fff;
-			line-height:16pt;
+			color: #fff;
+			font-size: 0.9375em;
+			line-height: 1.46667;
+			margin: 0;
 		}
 
 		& .workTitulo {
-			font-size: 14pt;
+			font-size: 1.125em;
 			font-weight: 400;
-			line-height: 24pt;
+			line-height: 1.77778;
 		}
+
+		& .caseDet .download { margin: 20px 0 0 0; }
+
+	}
+}
+
+@media ($breakpoint-from-small) {
+
+	#contWork {
+
+		& .titulo { margin: 25px 0;
+
+			& .col {
+				float: left;
+				height: 47%;
+				margin: 10px 10px 0 0;
+				width: 47%;
+			}
+		}
+	}
+}
+
+@media ($breakpoint-from-medium) {
+
+	#contWork .col {
+		height: 300px;
+		margin: 50px 50px 0 0;
+		width: 300px;
 	}
 }
 
@@ -113,10 +144,6 @@ img { border: 0; }
 		margin:-5px 10px 0 0;
 		width:25px;
 	}
-}
-
-#contWork .col .caseDet .download {
-	margin:20px 0 0 0;
 }
 
 .case-study {
@@ -147,17 +174,30 @@ img { border: 0; }
 
 	& .titulo { color: $brand-color-4; }
 
-	& .col1 {
-		position:relative;
-		width:250px;
-		float:left;
-		margin:25px 25px 0 0;
-	}
+	& .col2 { display: none; }
 
+	& .col1,
 	& .col2 {
-		position:relative;
-		float:left;
-		margin:50px 0 0 0;
+		position: relative;
+	}
+}
+
+@media ($breakpoint-from-medium) {
+
+	#contTouch {
+
+		& .col1,
+		& .col2 {
+			float: left;
+		}
+
+		& .col1 {
+			margin: 25px 25px 0 0;
+			width: 250px;
+		}
+
+		& .col2 { margin: 50px 0 0 0; }
+
 	}
 }
 
@@ -165,40 +205,42 @@ img { border: 0; }
 
 	& .titulo {
 		color: $brand-color-5;
-		margin: 25px 0;
 		text-transform: uppercase;
+		font-size: 1.75em;
+		line-height: 1.3572;
+		margin: 25px 0;
 	}
 
 	& .savethedate {
 		background: $brand-color-5;
-		color:#333;
-		padding:10px;
-		box-sizing:border-box;
-		text-align:center;
-		font-weight:400;
+		box-sizing: border-box;
+		color: #333;
+		font-weight: 400;
+		padding: 10px;
+		text-align: center;
 	}
 }
 
 /* Page Layout */
 
-#sticker {
-	box-sizing: border-box;
-	padding: 25px;
-	top: -60px;
-	width: 100%;
-}
-
+#sticker,
 #content {
 	box-sizing: border-box;
- 	margin: 0 25px;
 }
+
+#sticker {
+	padding: 1em;
+	top: -60px;
+}
+
+#content { margin: 0 1em; }
 
 .top {
 	background-image: url('#{$image-path}btn_top.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	height: 15px;
-	margin: 50px 0 50px 0;
+	margin: 50px 0;
 	width: 150px;
 }
 
@@ -209,15 +251,18 @@ img { border: 0; }
 
 @media ($breakpoint-from-medium) {
 
+	#sticker,
+	#content {
+		float: left;
+	}
+
 	#sticker {
 		position: relative;
-		float: left;
 		padding: 25px;
 		width: 250px;
 	}
 
 	#content {
-		float: left;
 		margin: 0 auto;
 		width: 66%;
 	}
@@ -240,11 +285,11 @@ img { border: 0; }
 }
 
 #socialMedia {
-	margin: 25px 0 25px 0;
+	margin: 25px 0;
 	min-width: 200px;
 
 	& .col1 {
-		padding: 5px 0 0 0;
+		padding: 5px 0 0;
 		float: left;
 
 		& img {
@@ -253,7 +298,7 @@ img { border: 0; }
 		}
 	}
 
-	& .col2 { float:right;
+	& .col2 { float: right;
 
 		& img { width: 105px; }
 
@@ -280,7 +325,7 @@ img { border: 0; }
 		background-image: url('#{$image-path}btn_menu_mobile.png');
 		background-size: cover;
 		height: 50px;
-		margin: 15px 0 15px -15px;
+		margin: 15px 0;
 		width: 50px;
 	}
 
@@ -294,7 +339,7 @@ img { border: 0; }
 
 	#socialMediaF { margin: 30px 0 0 0;
 
-		& .col1 { float:left;
+		& .col1 { float: left;
 
 			& img {
 				margin: 0 5px 0 0;
@@ -314,63 +359,6 @@ img { border: 0; }
 		max-width: 100%;
 		text-align: center;
 		top: 320px;
-	}
-}
-
-/* Legacy Breakpoints */
-
-@media only screen and (min-width : 320px) and (max-width : 532px) {
-
-	#contWork .col {
-		width:99%;
-		border:1px #C6C7C9 solid;
-		margin:0 50px 50px 0;
-	}
-	#contGreat .titulo {
-		color: $brand-color-5;
-		text-transform:uppercase;
-		font-size:20pt;
-		line-height:28pt;
-		margin:25px 0 25px 0;
-	}
-
-	#contTouch .col1 {
-		margin:0;
-	}
-	#contTouch .col2 {
-		display:none;
-	}
-}
-
-@media only screen and (min-width : 533px) and (max-width : 800px) {
-
-	#logo {
-		width:55%;
-	}
-
-	#contWork .titulo {
-		margin:25px 0 25px 0;
-	}
-	#contWork .col {
-		width:47%;
-		height:47%;
-		border:1px #C6C7C9 solid;
-		position:relative;
-		float:left;
-		margin:10px 10px 0 0;
-	}
-	#contGreat .titulo {
-		color: $brand-color-5;
-		text-transform:uppercase;
-		font-size:20pt;
-		line-height:28pt;
-		margin:25px 0 25px 0;
-	}
-	#contTouch .col1 {
-		margin:0;
-	}
-	#contTouch .col2 {
-		display:none;
 	}
 }
 
