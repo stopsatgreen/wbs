@@ -47,9 +47,6 @@ $(document).ready(function(){
 		cookieBanner.classList.add('hide');
 	});
 
-	// var larguraCase = $('#contWork .col').width();
-	// $('#contWork .col').height(larguraCase);
-
 	$('.caseLeg').click(function() {
 		$('.caseLegWrap',this).hide();
 		$(this).stop(true).animate({'height':'100%'},function() {
@@ -71,11 +68,6 @@ $(document).ready(function(){
 			});
 		}
 	);
-
-	// $(window).scroll(function() {
-	// 	var scrollPos = $(window).scrollTop();
-	// 	$('#sticker').css('top',scrollPos);
-	// });
 
 	var offset = (screenSize === 'large') ? 157 : 50;
 
