@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-// !Rewrite to remove jQuery
+// To do: Rewrite to remove jQuery
 
 	var navClass = 'show',
 			screenSize;
 
-// !Update to be dynamic
+// To do: Add listener
 	if (window.matchMedia) {
 		if (window.matchMedia('(max-width: 532px)').matches) {
 			screenSize = 'small';
@@ -16,32 +16,36 @@ $(document).ready(function(){
 		}
 	}
 
+	var menuMob = document.getElementById('menuMob'),
+			menuMobBtn = document.getElementById('menuMobBtn'),
+			btnFechar = document.getElementById('btnFechar');
+
 	function hideNav() {
-		$('#menuMob').removeClass(navClass);
+		menuMob.classList.remove(navClass);
 		return true;
 	}
 
 	if (screenSize != 'large') {
 
-		$('#menuMobBtn').click(function() {
-			$('#menuMob').addClass(navClass);
+		menuMobBtn.addEventListener('click', function() {
+			menuMob.classList.add(navClass);
 		});
 
-		$('#btnFechar').click(function() {
-			hideNav();
-		});
+		btnFechar.addEventListener('click', hideNav);
 
 	}
 
-	$('#cookies img').click(function() {
-		var alturaCookies = $('#cookies').height()*2;
-		$('#cookies').animate({'margin-top':'-'+alturaCookies+'px'});
+	// Fade out & remove cookie banner.
+	// To do: add cookie / localstorage check
+	var cookieBanner = document.getElementById('cookies'),
+			cookieTrigger = cookieBanner.querySelector('img');
+	cookieTrigger.addEventListener('click', function() {
+		cookieBanner.addEventListener('transitionend', function () {
+			cookieBanner.remove();
+			document.body.classList.remove('show-cookies');
+		});
+		cookieBanner.classList.add('hide');
 	});
-
-
-
-	/*var larguraTela = $(window).width();
-	$('#debug').html(larguraTela);*/
 
 	var larguraCase = $('#contWork .col').width();
 	$('#contWork .col').height(larguraCase);

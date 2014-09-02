@@ -230,57 +230,56 @@ img {
     width: 80%; } }
 #contWork .titulo {
   color: #6DCDF4; }
-#contWork .col {
+
+.case-studies {
+  margin: 50px 0; }
+
+.case-study {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% auto;
   border: 1px #C6C7C9 solid;
   height: 300px;
   margin: 0 0 1em 0;
   position: relative;
   width: 100%; }
-  #contWork .col .workTitulo, #contWork .col p {
+  .case-study .workTitulo, .case-study p {
     color: #fff; }
-  #contWork .col .workTitulo {
+  .case-study .workTitulo {
     font-size: 1.125em;
     font-weight: 400;
     line-height: 1.77778; }
-  #contWork .col p {
+  .case-study p {
     font-size: 0.9375em;
     line-height: 1.46667;
     margin: 0; }
-  #contWork .col .download {
+  .case-study .download {
     background: url("../../imagens/btn_download.png") no-repeat left center/contain;
     margin: 20px 0 0 0;
     padding-left: 2em; }
+  .case-study .caseLeg {
+    height: 95px;
+    background-color: #6DCDF4;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
+  .case-study .caseDet {
+    display: none; }
 
 @media (min-width: 533px) {
-  #contWork .col {
+  .case-study {
     float: left;
     height: 47%;
     margin: 10px 10px 0 0;
     width: 47%; } }
 @media (min-width: 801px) {
-  #contWork .col {
+  .case-study {
     height: 300px;
-    margin: 25px 25px 0 0;
+    margin: 0 25px 25px 0;
     width: 300px; } }
-.caseLeg {
-  height: 95px;
-  background-color: #6DCDF4;
-  box-sizing: border-box;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  position: absolute;
-  bottom: 0; }
-
-.caseDet {
-  display: none; }
-
-/* Work needed */
-.case-study {
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100% auto; }
-
 #case01 {
   background-image: url("../../imagens/img_work_clearblue.jpg"); }
 
@@ -387,7 +386,10 @@ img {
   border-bottom: 1px #e8e8e8 solid;
   box-sizing: border-box;
   margin: 0;
-  padding: 15px; }
+  padding: 15px;
+  transition: all 0.4s ease-in; }
+  #cookies.hide {
+    opacity: 0; }
   #cookies .cont img {
     float: left;
     margin: 20px 25px 0 10px;
@@ -413,7 +415,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 5px;
+    padding: 5px 20px;
     z-index: 99999; }
     #cookies .cont img {
       width: 15px;

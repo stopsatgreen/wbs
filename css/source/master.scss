@@ -154,46 +154,62 @@ img { border: 0; }
 	}
 }
 
-#contWork {
+#contWork .titulo { color: $brand-color-2; }
 
-	& .titulo { color: $brand-color-2; }
+// Consider replacing with Flexbox
 
- 	& .col {
-		border: 1px #C6C7C9 solid;
-		height: 300px;
-		margin: 0 0 1em 0;
-		position: relative;
-		width: 100%;
+.case-studies { margin: 50px 0; }
 
-		& .workTitulo,
-		& p {
-			color: #fff;
-		}
+.case-study {
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: 100% auto;
+	border: 1px #C6C7C9 solid;
+	height: 300px;
+	margin: 0 0 1em 0;
+	position: relative;
+	width: 100%;
 
-		& .workTitulo {
-			font-size: 1.125em;
-			font-weight: 400;
-			line-height: 1.77778;
-		}
-
-		& p {
-			font-size: 0.9375em;
-			line-height: 1.46667;
-			margin: 0;
-		}
-
-		& .download {
-			background: url('#{$image-path}btn_download.png') no-repeat left center / contain;
-			margin: 20px 0 0 0;
-			padding-left: 2em;
-		}
-
+	& .workTitulo,
+	& p {
+		color: #fff;
 	}
+
+	& .workTitulo {
+		font-size: 1.125em;
+		font-weight: 400;
+		line-height: 1.77778;
+	}
+
+	& p {
+		font-size: 0.9375em;
+		line-height: 1.46667;
+		margin: 0;
+	}
+
+	& .download {
+		background: url('#{$image-path}btn_download.png') no-repeat left center / contain;
+		margin: 20px 0 0 0;
+		padding-left: 2em;
+	}
+
+	& .caseLeg {
+		height: 95px;
+		background-color: $brand-color-2;
+		box-sizing: border-box;
+		cursor: pointer;
+		padding: 10px;
+		width:100%;
+		position:absolute;
+		bottom:0;
+	}
+
+	& .caseDet { display: none; }
 }
 
 @media ($breakpoint-from-small) {
 
-	#contWork .col {
+	.case-study {
 		float: left;
 		height: 47%;
 		margin: 10px 10px 0 0;
@@ -203,32 +219,11 @@ img { border: 0; }
 
 @media ($breakpoint-from-medium) {
 
-	#contWork .col {
+	.case-study {
 		height: 300px;
-		margin: 25px 25px 0 0;
+		margin: 0 25px 25px 0;
 		width: 300px;
 	}
-}
-
-.caseLeg {
-	height: 95px;
-	background-color: $brand-color-2;
-	box-sizing: border-box;
-	cursor: pointer;
-	padding: 10px;
-	width:100%;
-	position:absolute;
-	bottom:0;
-}
-
-.caseDet { display: none; }
-
-/* Work needed */
-
-.case-study {
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: 100% auto;
 }
 
 #case01 {
@@ -382,6 +377,9 @@ img { border: 0; }
 	box-sizing: border-box;
 	margin: 0;
 	padding: 15px;
+	transition: all 0.4s ease-in;
+
+	&.hide { opacity: 0; }
 
  	& .cont {
 
@@ -422,7 +420,7 @@ img { border: 0; }
 		top: 0;
 		left: 0;
 		width: 100%;
-		padding: 5px;
+		padding: 5px 20px;
 		z-index: 99999;
 
 		& .cont {
