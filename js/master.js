@@ -47,8 +47,8 @@ $(document).ready(function(){
 		cookieBanner.classList.add('hide');
 	});
 
-	var larguraCase = $('#contWork .col').width();
-	$('#contWork .col').height(larguraCase);
+	// var larguraCase = $('#contWork .col').width();
+	// $('#contWork .col').height(larguraCase);
 
 	$('.caseLeg').click(function() {
 		$('.caseLegWrap',this).hide();

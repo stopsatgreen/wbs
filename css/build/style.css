@@ -125,27 +125,7 @@ img {
 
 @media (min-width: 533px) and (max-width: 800px) {
   #logo {
-    width: 55%; } }
-/* Headings */
-.titulo {
-  font-size: 2.875em;
-  font-weight: 700;
-  margin: 50px 0; }
-
-@media (min-width: 801px) {
-  .titulo {
-    margin: 0; } }
-.subtopic {
-  color: #fff;
-  margin: 25px 0;
-  padding: 25px 0 0 10px;
-  box-sizing: border-box;
-  font-size: 1.25em;
-  font-weight: 400;
-  height: 50px;
-  line-height: 0.5;
-  width: 100%; }
-
+    width: 35%; } }
 /* Page Layout */
 #sticker {
   box-sizing: border-box;
@@ -163,13 +143,18 @@ img {
 
 @media (min-width: 533px) {
   #sticker {
-    padding: 0 0 25px 7.5%; } }
+    padding: 25px; }
+
+  #content {
+    margin: 0 25px; } }
 @media (min-width: 801px) {
   #sticker {
     position: fixed;
-    padding: 25px;
-    top: 30px;
+    top: 0;
     width: 250px; }
+
+  .show-cookies #sticker {
+    top: 30px; }
 
   #content {
     margin: 0 0 40px;
@@ -212,6 +197,22 @@ img {
       float: right; }
       #socialMedia .col2 img {
         width: 105px; } }
+/* Headings */
+.titulo {
+  font-size: 2.875em;
+  font-weight: 700; }
+
+.subtopic {
+  color: #fff;
+  margin: 25px 0;
+  padding: 25px 0 0 10px;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-weight: 400;
+  height: 50px;
+  line-height: 0.5;
+  width: 100%; }
+
 /* Sections */
 #contServices .titulo {
   color: #00ACED; }
@@ -222,7 +223,7 @@ img {
   #contServices p,
   #contAbout p,
   #contGreat p {
-    width: 80%; } }
+    width: 75%; } }
 #contWork .titulo {
   color: #6DCDF4; }
 
@@ -231,7 +232,7 @@ img {
 
 .case-study {
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center 30%;
   background-size: 100% auto;
   border: 1px #C6C7C9 solid;
   height: 300px;
@@ -267,25 +268,26 @@ img {
 @media (min-width: 533px) {
   .case-study {
     float: left;
-    height: 47%;
-    margin: 10px 10px 0 0;
-    width: 47%; } }
+    max-width: 48.5%; } }
+@media (min-width: 533px) and (max-width: 800px) {
+  .case-study:nth-child(even) {
+    float: right; } }
 @media (min-width: 801px) {
   .case-study {
     height: 300px;
     margin: 0 25px 25px 0;
     width: 300px; } }
 #case01 {
-  background-image: url("../../imagens/img_work_clearblue.jpg"); }
+  background-image: url("../../imagens/img_work_clearblue-cropped.jpg"); }
 
 #case02 {
-  background-image: url("../../imagens/img_work_natgeo.jpg"); }
+  background-image: url("../../imagens/img_work_natgeo-cropped.jpg"); }
 
 #case03 {
-  background-image: url("../../imagens/img_work_pottermore.jpg"); }
+  background-image: url("../../imagens/img_work_pottermore-cropped.jpg"); }
 
 #case04 {
-  background-image: url("../../imagens/img_work_bestseller.jpg"); }
+  background-image: url("../../imagens/img_work_bestseller-cropped.jpg"); }
 
 #contAbout .titulo {
   color: #EB1B2E; }
@@ -372,6 +374,9 @@ img {
     line-height: 1.143;
     margin: 1.143em auto;
     text-align: center; } }
+@media (min-width: 533px) and (max-width: 800px) {
+  #menuMob {
+    width: 60%; } }
 @media (min-width: 801px) {
   .social-footer-body {
     display: none; } }

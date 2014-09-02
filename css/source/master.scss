@@ -17,21 +17,7 @@ img { border: 0; }
 
 @media ($breakpoint-from-small) and ($breakpoint-to-large) {
 
-		#logo { width: 55%; }
-}
-
-/* Headings */
-
-.titulo {
-	font-size: 2.875em;
-	font-weight: 700;
-}
-
-.subtopic {
-	color: #fff;
-	margin: 25px 0;
-	padding: 25px 0 0 10px;
-	@include box-style();
+		#logo { width: 35%; }
 }
 
 /* Page Layout */
@@ -53,17 +39,21 @@ img { border: 0; }
 
 @media ($breakpoint-from-small) {
 
-	#sticker { padding: 0 0 25px 7.5%; }
+	#sticker { padding: 25px; }
+
+	#content { margin: 0 25px; }
+
 }
 
 @media ($breakpoint-from-medium) {
 
 	#sticker {
 		position: fixed;
-		padding: 25px;
-		top: 30px;
+		top: 0;
 		width: 250px;
 	}
+
+	.show-cookies #sticker { top: 30px; }
 
 	#content {
 		margin: 0 0 40px;
@@ -120,6 +110,20 @@ img { border: 0; }
 
 }
 
+/* Headings */
+
+.titulo {
+	font-size: 2.875em;
+	font-weight: 700;
+}
+
+.subtopic {
+	color: #fff;
+	margin: 25px 0;
+	padding: 25px 0 0 10px;
+	@include box-style();
+}
+
 /* Sections */
 
 #contServices {
@@ -136,7 +140,7 @@ img { border: 0; }
 	#contAbout,
 	#contGreat {
 
-		& p { width: 80%; }
+		& p { width: 75%; }
 
 	}
 }
@@ -149,7 +153,7 @@ img { border: 0; }
 
 .case-study {
 	background-repeat: no-repeat;
-	background-position: top;
+	background-position: center 30%;
 	background-size: 100% auto;
 	border: 1px #C6C7C9 solid;
 	height: 300px;
@@ -186,7 +190,7 @@ img { border: 0; }
 		box-sizing: border-box;
 		cursor: pointer;
 		padding: 10px;
-		width:100%;
+		width: 100%;
 		position:absolute;
 		bottom:0;
 	}
@@ -198,9 +202,14 @@ img { border: 0; }
 
 	.case-study {
 		float: left;
-		height: 47%;
-		margin: 10px 10px 0 0;
-		width: 47%;
+		max-width: 48.5%;
+	}
+}
+
+@media ($breakpoint-from-small) and ($breakpoint-to-large) {
+
+	.case-study:nth-child(even) {
+		float: right;
 	}
 }
 
@@ -214,19 +223,19 @@ img { border: 0; }
 }
 
 #case01 {
-	background-image: url('#{$image-path}img_work_clearblue.jpg');
+	background-image: url('#{$image-path}img_work_clearblue-cropped.jpg');
 }
 
 #case02 {
-	background-image: url('#{$image-path}img_work_natgeo.jpg');
+	background-image: url('#{$image-path}img_work_natgeo-cropped.jpg');
 }
 
 #case03 {
-	background-image: url('#{$image-path}img_work_pottermore.jpg');
+	background-image: url('#{$image-path}img_work_pottermore-cropped.jpg');
 }
 
 #case04 {
-	background-image: url('#{$image-path}img_work_bestseller.jpg');
+	background-image: url('#{$image-path}img_work_bestseller-cropped.jpg');
 }
 
 #contAbout .titulo { color: $brand-color-3; }
@@ -308,7 +317,6 @@ img { border: 0; }
 			-webkit-transform: none;
 			transform: none;
 		}
-
 	}
 
 	#menuMobBtn {
@@ -349,6 +357,11 @@ img { border: 0; }
 		margin: 1.143em auto;
 		text-align: center;
 	}
+}
+
+@media ($breakpoint-from-small) and ($breakpoint-to-large) {
+
+	#menuMob { width: 60%; }
 }
 
 @media ($breakpoint-from-medium) {
