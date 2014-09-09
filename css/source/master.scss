@@ -141,6 +141,7 @@ img { border: 0; }
 	#contAbout,
 	#contGreat {
 
+		& .subtopic,
 		& p { width: 75%; }
 
 	}

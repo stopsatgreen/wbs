@@ -222,8 +222,10 @@ img {
   background-color: #00ACED; }
 
 @media (min-width: 801px) {
-  #contServices p,
+  #contServices .subtopic, #contServices p,
+  #contAbout .subtopic,
   #contAbout p,
+  #contGreat .subtopic,
   #contGreat p {
     width: 75%; } }
 #contWork .titulo {
