@@ -71,7 +71,7 @@ $(document).ready(function(){
 
 	var offset = (screenSize === 'large') ? 157 : 50;
 
-	$('.menuBtn a').on('click', function (e) {
+	$('.nav-menu a').on('click', function (e) {
 		e.preventDefault();
 		var menuTarget = e.currentTarget.getAttribute('href');
 		if (screenSize != 'large') { hideNav(); }
